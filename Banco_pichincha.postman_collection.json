@@ -1,0 +1,313 @@
+{
+	"info": {
+		"_postman_id": "b3b7fcd6-6cd1-488d-a700-9b77d08f439d",
+		"name": "Banco_pichincha",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "https://localhost:44345/api/Clientes",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [
+					{
+						"key": "id_cliente",
+						"value": "2",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Clientes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Clientes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"nombres\" : \"Samuel Gavela\",\r\n    \"direccion\" : \"guasmo\",\r\n    \"telefono\" : \"0987786683\",\r\n    \"contrasena\" : \"ddfffff\",\r\n    \"estado\" : \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Clientes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Clientes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Clientes/2",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id_cliente\" : 2,\r\n    \"nombres\" : \"Valeska\",\r\n    \"direccion\" : \"sauces\",\r\n    \"telefono\" : \"0987786683\",\r\n    \"contrasena\" : \"12345\",\r\n    \"estado\" : \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Clientes/2",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Clientes",
+						"2"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Clientes/3",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": {
+					"raw": "https://localhost:44345/api/Clientes/",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Clientes",
+						""
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Cuentas",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"numero_cuenta\" : 478758,\r\n    \"tipo\": \"ahorro\",\r\n    \"saldo_inicial\" : 2000,\r\n    \"cliente\" : \"Samuel Gavela\",\r\n    \"estado\" : \"true\"\r\n\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Movimientoes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\" : \"12/06/2022\",\r\n    \"id_cliente\" : 4,\r\n    \"cliente\" : \"Samuel Gavela\", \r\n    \"numero_cuenta\" : \"478758\",\r\n    \"tipo\" : \"ahorro\",\r\n    \"saldo_inicial\" : 2000,\r\n    \"movimiento\" : \"debito\",\r\n    \"valor\" : 200,\r\n    \"estado\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Movimientoes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Movimientoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Movimientoes/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"id\" : 4\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Movimientoes/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Movimientoes",
+						"4"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Movimientoes",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"fecha\" : \"12/06/2022\",\r\n    \"id_cliente\" : 4,\r\n    \"cliente\" : \"Samuel Gavela\", \r\n    \"numero_cuenta\" : \"478758\",\r\n    \"tipo\" : \"ahorro\",\r\n    \"saldo_inicial\" : 2000,\r\n    \"movimiento\" : \"debito\",\r\n    \"valor\" : 8,\r\n    \"estado\": \"true\"\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Movimientoes",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Movimientoes"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Cuentas",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Cuentas",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Cuentas"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "https://localhost:44345/api/Movimientoes/4",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "https://localhost:44345/api/Movimientoes/porCliente/4",
+					"protocol": "https",
+					"host": [
+						"localhost"
+					],
+					"port": "44345",
+					"path": [
+						"api",
+						"Movimientoes",
+						"porCliente",
+						"4"
+					]
+				}
+			},
+			"response": []
+		}
+	]
+}
